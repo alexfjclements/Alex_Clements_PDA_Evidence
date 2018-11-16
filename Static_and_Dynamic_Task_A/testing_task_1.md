@@ -13,7 +13,7 @@ class CardGame
 
 
   def checkforAce(card)
-    if card.value = 1
+    if card.value = 1 # Equality operator needs ==
       return true
     else
       return false
@@ -24,22 +24,22 @@ class CardGame
   # Should be 'def' not 'dif'
   # Card objects passed as arguments should be seperated by a comma
   if card1.value > card2.value
-    return card.name
+    return card.name # should be card1.name, BUT card class has no 'name' so simply return card object
   else
-    card2
+    card2 # should be return card2.name, BUT card class has no 'name' so return card object
     # no clause for dealing with equal card values
   end
 end
-end # Extra 'end'
+end # Extra 'end' not required at this point
 
 def self.cards_total(cards)
   total
   # total not assigned a value, thus not defined
-  for card in cards
+  for card in cards # missing do
     total += card.value
     return "You have a total of" + total
     # Can't concat int and string- require total.to_s
   end
 end
-
+# missing final end for class
 ```
