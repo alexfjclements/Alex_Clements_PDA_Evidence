@@ -21,21 +21,25 @@ class CardGame
   end
 
   dif highest_card(card1 card2)
+  # Should be 'def' not 'dif'
+  # Card objects passed as arguments should be seperated by a comma
   if card1.value > card2.value
     return card.name
   else
     card2
+    # no clause for dealing with equal card values
   end
 end
-end
+end # Extra 'end'
 
 def self.cards_total(cards)
   total
+  # total not assigned a value, thus not defined
   for card in cards
     total += card.value
     return "You have a total of" + total
+    # Can't concat int and string- require total.to_s
   end
 end
-
 
 ```
